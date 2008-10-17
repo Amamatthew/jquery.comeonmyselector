@@ -1,0 +1,71 @@
+<html>
+   <head>
+      <script language="javascript" src="../lib/jquery.js"></script>
+      <script language="javascript" src="../lib/jquery.comeonmyselector.js"></script>
+      <title>jquery.comeOnMySelector Example</title>
+
+      <script type="text/javascript">
+         $(function() {
+           $('.radio_set').comeOnMySelector({type: 'radio'});
+           $('.checkbox_set').comeOnMySelector({type: 'checkbox'});
+
+           $('#submit_button').click(function() {
+             var checkboxResults = "";
+             $("input[name='checkbox']").each(function() {
+               if ($(this).attr('checked') == 'checked') {
+                 checkboxResults += $(this).val() + ',';
+               }
+             });
+             alert('Radio result: ' + $("input[name='radio']:checked").val() + 
+                 '; Checkbox result(s): ' + checkboxResults);
+           });
+         });
+      </script>
+
+      <link rel="stylesheet" type="text/css" href="stylesheets/screen.css"/>
+   </head>
+
+   <body>
+     <h1>jQuery.comeOnMySelector Example</h1>
+
+     <h2>With Radio Buttons</h2>
+
+
+     <fieldset class="radio_set">
+       <label for="english">English</label>
+       <input type="radio" name="radio" value="english"/>
+
+       <label for="spanish">Spanish</label>
+       <input type="radio" name="radio" value="spanish"/>
+
+       <label for="german">German</label>
+       <input type="radio" name="radio" value="german"/>
+       
+       <label for="italian">Italian</label>
+       <input type="radio" name="radio" value="italian"/>
+     </fieldset>
+
+     <h2>With Checkboxes</h2>
+
+     <fieldset class="checkbox_set">
+       <label for="english">English</label>
+       <input type="checkbox" name="checkbox" value="english"/>
+
+       <label for="spanish">Spanish</label>
+       <input type="checkbox" name="checkbox" value="spanish"/>
+
+       <label for="german">German</label>
+       <input type="checkbox" name="checkbox" value="german"/>
+       
+       <label for="italian">Italian</label>
+       <input type="checkbox" name="checkbox" value="italian"/>
+     </fieldset>
+
+     <button id="submit_button"/>
+
+   </body>
+
+</html>
+
+   
+
