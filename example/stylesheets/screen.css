@@ -1,3 +1,7 @@
-.active {
+.selected {
   background-color: #ccc;
+}
+
+.disabled {
+  color: #ccc;
 }

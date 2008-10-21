@@ -28,8 +28,9 @@
    <body>
      <h1>jQuery.comeOnMySelector Example</h1>
 
-     <h2>With Radio Buttons</h2>
+     <p>Note that 'Italian' is disabled below.  jquery.comeonmyselector supports disabled, selected, and normal states.</p>
 
+     <h2>With Radio Buttons</h2>
 
      <fieldset class="radio_set">
        <label for="english">English</label>
@@ -42,7 +43,7 @@
        <input type="radio" name="radio" value="german"/>
        
        <label for="italian">Italian</label>
-       <input type="radio" name="radio" value="italian"/>
+       <input type="radio" name="radio" value="italian" disabled="disabled"/>
      </fieldset>
 
      <h2>With Checkboxes</h2>
@@ -58,10 +59,10 @@
        <input type="checkbox" name="checkbox" value="german"/>
        
        <label for="italian">Italian</label>
-       <input type="checkbox" name="checkbox" value="italian"/>
+       <input type="checkbox" name="checkbox" disabled="disabled" value="italian"/>
      </fieldset>
 
-     <button id="submit_button"/>
+     <button id="submit_button">Check Values</button>
 
    </body>
 
